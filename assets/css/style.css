@@ -13,7 +13,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video{
     margin: 0;
     padding: 0;
     border: 0;
@@ -85,9 +85,11 @@ textarea{
 a{
     transition: 0.3s;
 }
-a:hover{
-    opacity: 0.6;
-    transition: 0.3s;
+.common-width-first{
+    max-width: 1140px;
+    padding: 140px 20px 80px;
+    margin: 0 auto;
+    position: relative;
 }
 .common-width{
     max-width: 1140px;
@@ -143,9 +145,18 @@ a:hover{
 }
 .common-btn-incline a:hover {
     transform: rotate(10deg);
-    opacity: 1;
 }
-
+.common-page_ttl{
+    margin-bottom: 40px;
+}
+.common-page_ttl h1{
+    font-size: 3.6rem;
+    text-align: center;
+}
+.common-page_ttl h1 span{
+    display: block;
+    font-family: "Schoolbell", cursive;
+}
 /*
 * header
 */
@@ -336,7 +347,6 @@ a:hover{
 .fv-content {
     position: relative;
     z-index: 2;
-    color: white;
     text-align: center;
     height: 100%;
     display: flex;
@@ -346,6 +356,7 @@ a:hover{
 }
 .fv-content h1{
     width: 60%;
+    opacity: 0.7;
 }
 .scroll_down {
     position: relative;
@@ -454,7 +465,7 @@ a:hover{
     font-size: 3.2rem;
 }
 .index-works-wrap{
-    background: #e4e4e4;
+    background: #ddd;
 }
 .index-works-ttl{
     font-size: 2.6rem;
@@ -469,6 +480,9 @@ a:hover{
 .index-work{
     width: calc((100% - 40px) / 3);
 }
+.index-work:hover{
+    transform: scale(1.05);
+}
 .index-work-img img{
     width: 100%;
 }
@@ -476,4 +490,32 @@ a:hover{
     margin-top: 40px;
     margin-right: auto;
     margin-left: auto;
+}
+
+/*
+* Works
+*/
+.works-wrap{
+    background: #ddd;
+}
+.works-ttl{
+    font-size: 2.6rem;
+}
+.works-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+.works + .works{
+    margin-top: 80px;
+}
+.work{
+    width: calc((100% - 40px) / 3);
+}
+.work:hover{
+    transform: scale(1.05);
+}
+.work-img img{
+    width: 100%;
 }
