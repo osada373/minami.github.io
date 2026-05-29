@@ -110,6 +110,14 @@ a{
     font-size: 1.6rem;
     line-height: 2.0;
 }
+.common-txt a{
+    color: #656dff;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #656dff;
+}
+.common-txt a:hover{
+    opacity: 0.6;
+}
 .dummy {
     height: 120vh;
     background-color: bisque;
@@ -453,10 +461,6 @@ a{
 .index-profile-txt{
     width: calc(70% - 20px);
 }
-.parent-container{
-    display: flex;
-    justify-content: flex-end;
-}
 .index-ttl-bl,
 .index-works-ttl-bl{
     margin-bottom: 40px;
@@ -501,6 +505,15 @@ a{
     }
     .index-work + .index-work{
         margin-top:20px;
+    }
+    .index-profile{
+    display: block;
+    }
+    .index-profile-img{
+    width: 100%;
+    }
+    .index-profile-txt{
+    width: 100%;
     }
 }
 /*
@@ -548,8 +561,16 @@ a{
 .single-work-img img{
     width: 100%;
 }
-.single-work img + img{
+.single-work img{
     margin-top: 20px;
+}
+.single-work-img-flyer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.single-work-img-flyer img{
+    width: calc((100% - 20px) / 2);
 }
 .single-work-desc{
     margin: 60px 0px;
@@ -608,5 +629,82 @@ a{
     }
     .single-work-desc dl dd{
         padding-bottom: 10px;
+    }
+}
+
+/*
+* Profile
+*/
+.plofile-contents{
+    display: flex;
+        justify-content: space-around;
+}
+.plofile-contents-img{
+    width: calc(40% - 20px);
+}
+.plofile-contents-img img{
+    width: 100%;
+}
+.plofile-contents-desk{
+    width: calc(60% - 20px);
+}
+.plofile-contents-ttl{
+    font-size: 2.8rem;
+}
+.plofile-skills{
+    display: flex;
+}
+.plofile-skills-list-ttl{
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.plofile-skills-list{
+    width: calc((100% - 20px) / 2);
+}
+.plofile-skills-list dl{
+    display: table;
+    width: 100%;
+}
+.plofile-skills-list dl dt,
+.plofile-skills-list dl dd{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 6px;
+    display: table-cell;
+}
+.plofile-skills-list + .plofile-skills-list{
+    margin-left: 20px;
+}
+.plofile-skills-list dl + dl{
+    margin-top: 10px;
+}
+.plofile-skills-list dl dt{
+    background: #bec1ff;
+    vertical-align: middle;
+    text-align: center;
+}
+.plofile-skills-list dl dd{
+    background: #e7e8ff;
+}
+
+@media screen and (max-width: 428px) {
+    .plofile-contents{
+    display: block;
+    }
+    .plofile-contents-img{
+    width: 100%;
+    }
+    .plofile-contents-desk{
+    width: 100%;
+    }
+    .plofile-skills{
+    display: block;
+    }
+    .plofile-skills-list{
+    width: 100%;
+    }
+    .plofile-skills-list + .plofile-skills-list{
+    margin-left: 0px;
+    margin-top: 40px;
     }
 }
